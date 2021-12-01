@@ -12,9 +12,10 @@ const App = (props) => {
     dataJson, 
     schemaJson
   } = props.chartConfig;
+  const containerProps = props?.containerProps || {};
 
   return (
-    <ScrollView>
+    <ScrollView {...containerProps}>
       <ReactNativeFusionCharts
         type={type}
         width={width}
